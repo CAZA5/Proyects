@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Create a new password</title>
+    <style>
+        
+     :root{
+        --white:#ffffff;
+        --black:#000000;
+        --Very-light-pink:#C7C7C7;
+        --Text-input-field:#F7F7F7;
+        --hospital-green:#ACD9B2;
+        --sm:14px;/*Medida para algo pequeño*/
+        --md:16px;
+        --lg:18px;
+     }
+        body{
+            margin:0;/*Poner margen en 0*/
+            font-family: 'Quicksand', sans-serif;
+          
+           
+        }
+        .login{
+            width:100%;
+            height:100vh;
+            display: grid;/*Posicion Grid*/
+            place-items: center;/*Centrar con Grid*/
+        
+        }
+
+        .form-countainer{
+            display: grid;
+            grid-template-rows: auto 1fr auto;/*Acomoda logo titulo y labels*/
+            width:300px;/*para adecuar a pantallas pequeñas*/
+        }
+
+        .logo{
+            width:150px;/*Agrandar logo*/
+            margin-bottom: 48px;/*Separar hacia arriba*/
+            justify-self:center;/*Centrar*/
+            display: none;/*Para que sea para movil y no desktop*/
+            
+
+        }
+
+        .title{
+        font-size: var(--lg);
+        margin-bottom:12px;
+        text-align: center;
+     }
+
+     .subtitle{
+        color:var(--Very-light-pink);/*Color variable*/
+        font-size: var(--md);/*Tamaño letra variable*/
+        font-weight: 300;/*Letra mas delgada*/
+        margin-top: 0;/*No cruzar parrafos*/
+        margin-bottom: 30px;/*Separar de formulario*/
+        text-align: center;
+     }
+
+     .form{
+        display: flex;
+        flex-direction: column;
+     }
+
+     .label{
+        font-size: var(--sm);
+        font-weight:bold;
+        margin-bottom: 4px;
+     }
+
+     .pass{
+        background-color: var(--Very-light-pink);
+        border:none;/*Quitar borde*/
+        border-radius: 4px;
+        height:20px;
+        padding:6px;
+        font-size: var(--md);
+        margin-bottom: 50px;
+     }
+
+     .pass2{
+        background-color: var(--Very-light-pink);
+        border:none;/*Quitar b2pxorde*/
+        border-radius: 4px;
+        height:20px;
+        padding:6px;
+        font-size: var(--md);
+        margin-bottom: 12px;
+     }
+
+     .primary{
+        background-color: var(--hospital-green) ;
+        border-radius:8px ;
+        border:none;
+        color:var(--white);
+        width:100%;
+        cursor:pointer;/*Cmbiar flecha por manita*/
+        font-size: var(--md);
+        font-weight: bold;
+        height:60px;
+        margin-bottom: 30px;
+        margin-top: 14;
+     }
+
+     @media (max-width: 640px) {/*Tamaño de pantalla*/
+      .logo {
+        display: block;
+      }
+    }
+    
+     
+     
+ 
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-countainer">
+            <img class="logo" alt="logo" src="../Recursos/logos/logo_yard_sale.svg">
+
+            <h1 class="title">Create a new password</h1>
+            <p class="subtitle">Enter a new password for your account</p>
+
+            <form class="form">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="*******" class="pass2">
+
+                <label for ="new-password"> Password </label>
+                <input type="password" placeholder="*******" class="pass">
+                
+
+                <input type="submit" value="Confirm" class="primary">
+
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>
